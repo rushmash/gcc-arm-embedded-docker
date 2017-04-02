@@ -1,14 +1,9 @@
-FROM ubuntu:latest
+FROM ubuntu:zesty
 
-RUN apt-get update
+ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get -y install \
+RUN apt-get update && apt-get -y install \
+    gcc-arm-none-eabi \
     build-essential \
     cmake \
     git 
-
-RUN apt-get -y install \
-    gcc-arm-none-eabi \
-    libnewlib-arm-none-eabi \
-    libstdc++-arm-none-eabi-newlib \
-    libnewlib-dev
