@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:disco
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -7,4 +7,6 @@ RUN apt-get update && apt-get -y install \
     build-essential \
     ninja-build \
     cmake \
-    git 
+    curl \
+    zip \
+    git
