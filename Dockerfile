@@ -1,10 +1,10 @@
-FROM ubuntu:disco
+FROM fedora:latest
 
-ARG DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && apt-get -y install \
-    gcc-arm-none-eabi \
-    build-essential \
+RUN dnf -y update && dnf -y install \
+    arm-none-eabi-binutils-cs \
+    arm-none-eabi-gcc-cs-c++ \
+    arm-none-eabi-gcc-cs \
+    arm-none-eabi-newlib \
     ninja-build \
     cmake \
     curl \
