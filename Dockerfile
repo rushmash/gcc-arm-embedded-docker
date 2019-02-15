@@ -1,12 +1,10 @@
-FROM fedora:latest
+FROM archlinux/base:latest
 
-RUN dnf -y update && dnf -y install \
-    arm-none-eabi-binutils-cs \
-    arm-none-eabi-gcc-cs-c++ \
-    arm-none-eabi-gcc-cs \
+RUN pacman -Syu --noconfirm && pacman --noconfirm -S \
+    arm-none-eabi-binutils \
     arm-none-eabi-newlib \
-    ninja-build \
+    arm-none-eabi-gcc \
+    ninja \
     cmake \
-    curl \
     zip \
     git
