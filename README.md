@@ -4,7 +4,7 @@ This Docker image provides the most (or at least almost) up-to-date version of [
 The image relies on the packages available from baseimage repositories, so resulting version of software is a subject to change, please be aware of that.
 
 ## Build
-This image has set-up [automated Docker build](https://hub.docker.com/r/rushmash/gcc-arm-embedded-docker/).
+This image has set-up [automated Docker build](https://github.com/rushmash/gcc-arm-embedded-docker/pkgs/container/gcc-arm-embedded-docker).
 
 ## Additions
 Just for convenience, besides the toolchain, several useful packages are included:
